@@ -12,9 +12,9 @@ import { ocrData } from "./ocr.js";
 import path from 'path';
 
 //Static files
-app.use(express.static(path.join(__dirname,"../Frontend/ocr/build")));
+app.use(express.static(path.join(__dirname,"./Frontend/ocr/build")));
 app.get('*',(req,res)=>{
-  res.sendFile(path.join(__dirname,"../Frontend/ocr/build/index.html"))
+  res.sendFile(path.join(__dirname,"./Frontend/ocr/build/index.html"))
 });
 
 const PORT = process.env.PORT || 5000;
