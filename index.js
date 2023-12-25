@@ -9,7 +9,7 @@ import dotenv from "dotenv";
 import multer from "multer";
 import Info from "./db/schema.js"
 import { ocrData } from "./ocr.js";
-const path = require('path');
+import path from 'path';
 
 //Static files
 app.use(express.static(path.join(__dirname,"../Frontend/ocr/build")));
