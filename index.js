@@ -16,9 +16,9 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 //Static files
-app.use(express.static(path.join(__dirname,"./Frontend/ocr/build")));
+app.use(express.static(path.join(__dirname,"./client/build")));
 app.get('*',(req,res)=>{
-  res.sendFile(path.join(__dirname,"./Frontend/ocr/build/index.html"))
+  res.sendFile(path.join(__dirname,"./client/build/index.html"))
 });
 
 const PORT = process.env.PORT || 5000;
